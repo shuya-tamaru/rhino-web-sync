@@ -62,7 +62,7 @@ export default function Interfaces() {
 
   useEffect(() => {
     setUserText(text);
-  }, [text]);
+  }, [text, focusMesh]);
 
   return (
     <>

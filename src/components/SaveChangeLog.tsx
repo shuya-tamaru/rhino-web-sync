@@ -13,9 +13,7 @@ export default function SaveChangeLog() {
     setLoading(true);
     const json = JSON.stringify(changeLog);
     try {
-      const res = await axios.post("/api", {
-        body: json,
-      });
+      const res = await axios.post("/api", json);
       console.log(res);
       toast({
         title: "Change log saved successfully",

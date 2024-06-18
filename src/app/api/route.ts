@@ -3,11 +3,8 @@ import fs from "fs";
 
 export async function POST(request: NextRequest) {
   const data = await request.json();
-
-  // ファイルパスを定義
   const filePath = "C:\\Users\\81803\\Desktop\\sync\\data.json";
 
-  // データをファイルに書き込む
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     return NextResponse.json({ message: "File saved successfully" });
